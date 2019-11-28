@@ -5,11 +5,14 @@
  */
 package shapes;
 
+import java.awt.Graphics;
+
 /**
  *
  * @author mkone03
  */
 public class LineImplementation implements Visitor{
+    Graphics g;
 
     @Override
     public void visite(Line line) {
