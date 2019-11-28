@@ -14,12 +14,12 @@ import java.util.List;
  *
  * @author mkone03
  */
-public class ShapeComposite extends Shape {
+public class DrawingWithVisitor extends Shape {
     
     private List<Shape> myShapes = new LinkedList<>();
     
     
-    public void addShapeList(Shape shape){
+    public void addShapeTOList(Shape shape){
         myShapes.add(shape);
     }
     
