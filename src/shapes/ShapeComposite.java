@@ -14,7 +14,7 @@ import java.util.List;
  *
  * @author mkone03
  */
-public class DrawingWithComposite extends Shape {
+public class ShapeComposite extends Shape {
     
     private List<Shape> myShapes = new LinkedList<>();
     

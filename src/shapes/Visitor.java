@@ -12,5 +12,5 @@ package shapes;
 public interface Visitor {
     void visite(Line line);
     void visite(Circle circle);
-    void visite(DrawingWithComposite composite);
+    void visite(ShapeComposite composite);
 }

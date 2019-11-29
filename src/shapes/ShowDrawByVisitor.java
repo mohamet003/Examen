@@ -11,11 +11,11 @@ import java.awt.Graphics;
  *
  * @author mkone03
  */
-public class VisitorImplementation implements Visitor{
+public class ShowDrawByVisitor implements Visitor{
     
     private Graphics g;
 
-    public VisitorImplementation(Graphics g) {
+    public ShowDrawByVisitor(Graphics g) {
         this.g = g;
     }
 
@@ -30,7 +30,7 @@ public class VisitorImplementation implements Visitor{
     }
 
     @Override
-    public void visite(DrawingWithComposite composite) {
+    public void visite(ShapeComposite composite) {
         composite.draw(g);
     }
     

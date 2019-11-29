@@ -5,8 +5,8 @@ import java.awt.Point;
 import javax.swing.JApplet;
 
 public class DrawingApplet extends JApplet {
-        private DrawingWithComposite shapeComposite = new DrawingWithComposite();
-        private DrawingWithComposite shapeComposite2 = new DrawingWithComposite();
+        private ShapeComposite shapeComposite = new ShapeComposite();
+        private ShapeComposite shapeComposite2 = new ShapeComposite();
         
 	@Override
 	public void init() {
@@ -17,7 +17,6 @@ public class DrawingApplet extends JApplet {
 				10
 			)
 		);
-                
                 
 		Line line2 = new Line(
 			new Point(30,35),
@@ -47,7 +46,7 @@ public class DrawingApplet extends JApplet {
 	@Override
 	public void paint(Graphics g) {
 		super.paint(g);
-                VisitorImplementation visitorImplementation = new VisitorImplementation(g);
+                ShowDrawByVisitor visitorImplementation = new ShowDrawByVisitor(g);
                 visitorImplementation.visite(shapeComposite);
 	}	
 }
