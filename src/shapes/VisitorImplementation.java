@@ -30,7 +30,7 @@ public class VisitorImplementation implements Visitor{
     }
 
     @Override
-    public void visite(DrawingWithVisitor composite) {
+    public void visite(DrawingWithComposite composite) {
         composite.draw(g);
     }
     

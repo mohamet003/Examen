@@ -5,35 +5,20 @@ import java.awt.Point;
 import javax.swing.JApplet;
 
 public class DrawingApplet extends JApplet {
-	private Drawing myDrawing = new Drawing();
-        private DrawingWithVisitor shapeComposite = new DrawingWithVisitor();
-        private DrawingWithVisitor shapeComposite2 = new DrawingWithVisitor();
+        private DrawingWithComposite shapeComposite = new DrawingWithComposite();
+        private DrawingWithComposite shapeComposite2 = new DrawingWithComposite();
         
-
 	@Override
 	public void init() {
 		super.init();
-		// Initialiser le dessin
-		myDrawing.addShape(
-			new Circle(
-				new Point(30,30), //center
-				10 // radius
-			)
-		);
-		Line line = new Line(
-			new Point(30,30),
-			new Point(45,45)
-		);
-		line.translateBy(25, 35);
-		myDrawing.addShape(line);
-                
-                // Test avec le composite
                 shapeComposite.addShapeTOList(
 			new Circle(
 				new Point(40,40),
 				10
 			)
 		);
+                
+                
 		Line line2 = new Line(
 			new Point(30,35),
 			new Point(45,50)
